@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:edit, :update, :create, :show, :destroy]
+  before_action :set_article, only: [:edit, :update, :show, :destroy]
 
   def index
     # using plural since we gonna fetch all of article in db.
@@ -11,7 +11,6 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-    @article = Article.find(params[:id])
   end
 
   def update
@@ -39,7 +38,7 @@ class ArticlesController < ApplicationController
   def destroy
     @article.destroy
     flash[:notice] = "Article was successfully deleted"
-    redirect_to articles_path
+    redirect_to article_path
   end
 
   private
