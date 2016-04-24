@@ -1,47 +1,5 @@
-<style>
-  code {
-    background: #2db34a;
-    border-radius: 6px;
-    color: #fff;
-    display: block;
-    font: 14px/24px "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
-    padding: 24px 15px;
-    text-align: center;
-  }
-  header,
-  section,
-  aside,
-  footer {
-    margin: 0 1.5% 24px 1.5%;
-  }
-  section {
-    float: left;
-    width: 63%;
-  }
-  aside {
-    float: right;
-    width: 30%;
-  }
-  footer {
-    clear: both;
-    margin-bottom: 0;
-  }
-</style>
-<html>
-<body bgcolor="#7fffd4">
-  <header>
-    <code>
-      THis is home page<br/>
-      <%= link_to "Aplpha Blog", articles_path%> | <%= link_to 'go to about page', about_path%></code>
-  </header>
-
-  <section>
-    <code>&#60;section&#62; <br> float: left;</code>
-  </section>
-
-  <aside>
-    <code>&#60;aside&#62; <br> float: right;</code>
-  </aside>
-</body>
-</html>
+  <div class="center jumbotron">
+    <h1>Alpha Blog</h1>
+    <%= link_to "Sign up now", "#", class: "btn btn-primary btn-lg btn-xlarge" %>
+  </div>
 
