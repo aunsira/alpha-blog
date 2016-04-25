@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:edit, :update, :show, :destroy]
+  before_action :required_user, except: [:index, :show]
+  before_action :required_same_user, only: [:edit, :update, :destroy]
 
   def index
     # using plural since we gonna fetch all of article in db.
@@ -49,5 +51,12 @@ class ArticlesController < ApplicationController
 
   def set_article
     @article = Article.find(params[:id])
+  end
+
+  def required_same_user
+    if current_user != @article.user
+      flash[:danger] = "You can only edit or delete your articles"
+      redirect_to root_path
+    end
   end
 end
