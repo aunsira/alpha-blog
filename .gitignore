@@ -19,3 +19,4 @@
 # Ignore all of intellij stuff
 /.idea
 /.idea/workspace.xml
+.byebug_history
