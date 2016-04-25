@@ -17,6 +17,6 @@
 /tmp
 
 # Ignore all of intellij stuff
-/.idea
+.idea/
 /.idea/workspace.xml
 /.byebug_history
